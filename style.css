@@ -1,0 +1,77 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff7e8;
+    color: #5b3a29;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background Three.js Canvas */
+#three-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #ffdab9;
+    padding: 1.5rem;
+    color: #5b3a29;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Section Styling */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #ffe4c4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #8b4513;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffdab9;
+    color: #5b3a29;
+    font-size: 1rem;
+}
