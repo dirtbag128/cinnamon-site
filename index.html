@@ -20,6 +20,29 @@
 
         <!-- Header Section -->
         <h1>UNDER CONSTRUCTION ! Please check later!</h1>
+        <script>
+            const countdown = document.createElement('div');
+            countdown.id = 'countdown';
+            document.body.appendChild(countdown);
+
+            const endTime = new Date();
+            endTime.setHours(endTime.getHours() + 42);
+
+            function updateCountdown() {
+                const now = new Date();
+                const diff = endTime - now;
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                countdown.innerText = `${days} days, ${hours} hours, ${mins} minutes, ${secs} seconds`;
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        </script>
         <header>
             <h1>Cinnamon & Diabetes Research</h1>
             <p>
@@ -90,9 +113,69 @@
         <!-- Footer -->
         <footer>
             <p>
-                Made with 💛 by <link href="github.com/dirtbag128" /> share the
+                Made with 💛 to share the
                 benefits of nature.
             </p>
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/dirtbag128" target="_blank">GitHub</a>
+                </li>
+                <li>
+                    <a href="mailto:anandsatvik11313@gmail.com">Email: anandsatvik11313@gmail.com</a>
+                </li>
+            </ul>
+            <style>
+                #contact {
+                    background-color: #f7f7f7;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+                #contact h2 {
+                    color: #666;
+                    margin-bottom: 10px;
+                }
+                #contact ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                #contact li {
+                    margin-bottom: 10px;
+                }
+                #contact a {
+                    text-decoration: none;
+                    color: #337ab7;
+                    transition: color 0.2s ease;
+                }
+                #contact a:hover {
+                    color: #23527c;
+                }
+                #contact li::before {
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #337ab7;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    animation: pulse 2s infinite;
+                }
+                @keyframes pulse {
+                    0% {
+                        transform: scale(1);
+                    }
+                    50% {
+                        transform: scale(1.2);
+                    }
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            </style>
+        </section>
         </footer>
 
         <!-- Three.js Script for Cinnamon Stick Animation -->
