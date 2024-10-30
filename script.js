@@ -1,5 +1,27 @@
 // Initialize Three.js scene
 const scene = new THREE.Scene();
+import { SVGLoader } from "three/addons/loaders/SVGLoader.js";
+
+const loader = new SVGLoader();
+loader.load(
+  "resources/cinnamon-stick.svg",
+  (data) => {
+    const paths = data.paths;
+    const material = new THREE.MeshBasicMaterial({ color: 0xd2691e });
+    
+    paths.forEach((path) => {
+      const shapes = path.toShapes(true);
+      shapes.forEach((shape) => {
+        const geometry = new THREE.ShapeGeometry(shape);
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+      });
+    });
+  },
+  undefined,
+  (error) => console.error(error)
+);
+
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,

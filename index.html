@@ -5,44 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cinnamon & Diabetes Research</title>
         <link rel="stylesheet" href="style.css" />
-        <script type="importmap">
-            {
-                "imports": {
-                    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-                }
-            }
-        </script>
     </head>
     <body>
         <!-- Three.js Background Canvas -->
         <div id="three-canvas"></div>
 
         <!-- Header Section -->
-        <h1>UNDER CONSTRUCTION ! Please check later!</h1>
-        <script>
-            const countdown = document.createElement('div');
-            countdown.id = 'countdown';
-            document.body.appendChild(countdown);
-
-            const endTime = new Date();
-            endTime.setHours(endTime.getHours() + 42);
-
-            function updateCountdown() {
-                const now = new Date();
-                const diff = endTime - now;
-
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-                countdown.innerText = `${days} days, ${hours} hours, ${mins} minutes, ${secs} seconds`;
-            }
-
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-        </script>
         <header>
             <h1>Cinnamon & Diabetes Research</h1>
             <p>
@@ -53,16 +21,14 @@
 
         <!-- Main Content Sections -->
         <main>
-            <!-- About Diabetes Section -->
             <section id="diabetes">
                 <h2>About Type 2 Diabetes</h2>
                 <p>
                     Type 2 diabetes is a chronic condition that affects the way
-                    the body processes blood sugar (glucose)...
+                    the body processes blood sugar...
                 </p>
             </section>
 
-            <!-- Benefits of Cinnamon Section -->
             <section id="cinnamon-benefits">
                 <h2>Benefits of Cinnamon</h2>
                 <ul>
@@ -81,30 +47,65 @@
                 </ul>
             </section>
 
-            <!-- Research Findings Section -->
             <section id="research">
                 <h2>Research on Cinnamon & Diabetes</h2>
                 <p>
                     Studies have shown that cinnamon can lower blood sugar
-                    levels in some cases...
+                    levels in some cases, though results vary...
+                </p>
+                <div id="research-summary">
+                    <p>
+                        <strong>Research Summary Placeholder:</strong>
+                        Placeholder text for summarizing recent studies on
+                        cinnamon’s effects on blood glucose levels.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Gallery</h2>
+                <img src="resources/Mechanisms-leading-to-insulin-resistance-in-diabetes-mellitus.png" alt="Mechanisms leading to insulin resistance in diabetes mellitus.">
+                <p>Mechanisms leading to insulin resistance in diabetes mellitus.</p>
+                <img src="resources/Pathophysiology-of-type-2-diabetes-mellitus.png" alt="Pathophysiology of type 2 diabetes mellitus.">
+                <p>Pathophysiology of type 2 diabetes mellitus.</p>
+                <img src="resources/yo glut 4.gif" alt="animation of the insulin receptors functioning properly">
+                <p>Animation showing the functioning of inulin in healthy people, in case of diabetic type 2 patients , the lower part of the receptor protein doesn't function properly</p>
+                <a href="https://www.instagram.com/kriparth_patel/">Courtsey of Kripath Patel</a>
+            </section>
+              
+            <section id="video-tutorials">
+                <h2>Video Tutorials</h2>
+                <div>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/example_video"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <p>
+                    Check out the video above for a comprehensive look into how
+                    cinnamon interacts with the body’s metabolism.
                 </p>
             </section>
 
-            <!-- Usage & Dosage Section -->
             <section id="usage">
                 <h2>How to Use Cinnamon</h2>
                 <ul>
                     <li>
                         Recommended dosages vary, but generally between 1-4
-                        grams daily for non diabetic patients
+                        grams daily for non-diabetic patients.
                     </li>
                     <li>
-                        4-6 grams for pre-diabeticand diabetic patients with
-                        recommendation of doctor
+                        4-6 grams for pre-diabetic and diabetic patients under
+                        medical supervision.
                     </li>
                     <li>
                         Ceylon cinnamon is safer for long-term use due to lower
-                        coumarin content...
+                        coumarin content.
                     </li>
                 </ul>
             </section>
@@ -112,73 +113,26 @@
 
         <!-- Footer -->
         <footer>
-            <p>
-                Made with 💛 to share the
-                benefits of nature.
-            </p>
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <ul>
-                <li>
-                    <a href="https://github.com/dirtbag128" target="_blank">GitHub</a>
-                </li>
-                <li>
-                    <a href="mailto:anandsatvik11313@gmail.com">Email: anandsatvik11313@gmail.com</a>
-                </li>
-            </ul>
-            <style>
-                #contact {
-                    background-color: #f7f7f7;
-                    padding: 20px;
-                    border-radius: 10px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                }
-                #contact h2 {
-                    color: #666;
-                    margin-bottom: 10px;
-                }
-                #contact ul {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-                }
-                #contact li {
-                    margin-bottom: 10px;
-                }
-                #contact a {
-                    text-decoration: none;
-                    color: #337ab7;
-                    transition: color 0.2s ease;
-                }
-                #contact a:hover {
-                    color: #23527c;
-                }
-                #contact li::before {
-                    content: "";
-                    display: inline-block;
-                    width: 10px;
-                    height: 10px;
-                    background-color: #337ab7;
-                    border-radius: 50%;
-                    margin-right: 10px;
-                    animation: pulse 2s infinite;
-                }
-                @keyframes pulse {
-                    0% {
-                        transform: scale(1);
-                    }
-                    50% {
-                        transform: scale(1.2);
-                    }
-                    100% {
-                        transform: scale(1);
-                    }
-                }
-            </style>
-        </section>
+            <p>Made with 💛 to share the benefits of nature.</p>
+            <section id="contact">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/dirtbag128" target="_blank"
+                            >GitHub</a
+                        >
+                    </li>
+                    <li>
+                        <a href="mailto:anandsatvik11313@gmail.com"
+                            >Email: anandsatvik11313@gmail.com</a
+                        >
+                    </li>
+                </ul>
+            </section>
         </footer>
 
-        <!-- Three.js Script for Cinnamon Stick Animation -->
-        <script src="three-cinnamon.js"></script>
+        <!-- Three.js Script -->
+        <script src="https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
