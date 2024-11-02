@@ -243,3 +243,8 @@ video {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
     padding: 5px; /* Adds some spacing between image and border */
 }
+/*Center Table*/
+#to-center {
+    margin-left: auto;
+    margin-right:auto;
+}
