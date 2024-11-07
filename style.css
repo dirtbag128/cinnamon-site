@@ -243,3 +243,28 @@ video {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
     padding: 5px; /* Adds some spacing between image and border */
 }
+
+.plot-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plot-description {
+    margin: 20px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .plot-container {
+        padding: 10px;
+        margin: 10px auto;
+    }
+}
