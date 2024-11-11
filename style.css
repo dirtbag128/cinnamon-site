@@ -23,6 +23,7 @@ body {
     color: #5b3a29;
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease; /* Adds smooth background transition */
 }
 
 /* Background Three.js Canvas */
@@ -41,14 +42,25 @@ header {
     background-color: #ffdab9;
     padding: 1.5rem;
     color: #5b3a29;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+header h1:hover {
+    transform: translateY(-5px); /* Adds a hover lift effect */
 }
 
 header p {
     font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header p:hover {
+    color: #8b4513; /* Darker color when hovered */
 }
 
 /* Section Styling */
@@ -62,12 +74,25 @@ section {
     background-color: #ffe4c4;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+section:hover {
+    background-color: #ffdab9;
+    transform: translateY(-5px); /* Adds a hover lift effect */
 }
 
 section h2 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     color: #8b4513;
+    transition: color 0.3s ease;
+}
+
+section h2:hover {
+    color: #5b3a29; /* Darker text on hover */
 }
 
 ul {
@@ -86,20 +111,28 @@ footer {
     background-color: #ffdab9;
     color: #5b3a29;
     font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-/* Base styles for all screen sizes */
+
+/* Table and Responsive styles */
 .table-container {
     display: flex;
     justify-content: center;
-    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+    overflow-x: auto;
     width: 100%;
-    padding: 0 15px; /* Adds a bit of padding on smaller screens */
+    padding: 0 15px;
+    transition: all 0.3s ease;
 }
 
 table {
-    width: 80%; /* Default width */
+    width: 80%;
     max-width: 100%;
     border-collapse: collapse;
+    transition: transform 0.3s ease;
+}
+
+table:hover {
+    transform: scale(1.02); /* Table zoom effect */
 }
 
 table,
@@ -110,24 +143,6 @@ td {
     text-align: center;
 }
 
-/* Responsive video container */
-.video-container {
-    position: relative;
-    width: 80%; /* Default width */
-    max-width: 100%;
-    padding-top: 56.25%; /* Aspect ratio 16:9 */
-    margin: 0 auto;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Responsive adjustments for smaller screens */
 @media (max-width: 1024px) {
     table {
         width: 90%;
@@ -150,8 +165,8 @@ td {
     table,
     th,
     td {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        padding: 6px; /* Reduce padding on smaller screens */
+        font-size: 14px;
+        padding: 6px;
     }
 }
 
@@ -159,7 +174,7 @@ td {
     table,
     th,
     td {
-        font-size: 12px; /* Further adjust font size for very small screens */
+        font-size: 12px;
         padding: 4px;
     }
 
@@ -178,6 +193,12 @@ td {
     max-width: 400px;
     margin: 30px auto;
     text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+#contact:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 #contact h2 {
@@ -195,6 +216,11 @@ td {
 #contact li {
     margin-bottom: 10px;
     font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+#contact li:hover {
+    transform: translateX(10px); /* Shift the item slightly to the right */
 }
 
 #contact a {
@@ -234,14 +260,23 @@ td {
 /* Styling for images */
 img,
 video {
-    display: block; /* Ensures the image behaves like a block element */
-    max-width: 80%; /* Limits image width to 80% of the container */
-    height: auto; /* Keeps image aspect ratio */
-    margin: 20px auto; /* Centers the image */
-    border: 3px solid #d2691e; /* Adds a cinnamon-colored border */
-    border-radius: 10px; /* Rounds the corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    padding: 5px; /* Adds some spacing between image and border */
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+    border: 3px solid #d2691e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+img:hover,
+video:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
 .plot-container {
@@ -252,6 +287,11 @@ video {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plot-container:hover {
+    transform: scale(1.02); /* Plot container zoom effect */
 }
 
 .plot-description {
@@ -260,6 +300,11 @@ video {
     padding: 0 20px;
     line-height: 1.6;
     color: #333;
+    transition: color 0.3s ease;
+}
+
+.plot-description:hover {
+    color: #8b4513; /* Darker color on hover */
 }
 
 @media (max-width: 768px) {
