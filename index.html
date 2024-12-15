@@ -31,24 +31,28 @@
         <!-- Main Content Sections -->
         <main>
             <section id="diabetes">
-                <h2>About Type 2 Diabetes</h2>
-                <p>
-                    Type 2 diabetes is a chronic condition that affects the way
-                    the body processes blood sugar... y
-                </p>
-                <img
-                    src="resources/d-risk.png"
-                    alt="Chart of risk factors affecting diabetes"
-                />
+                <h2 onclick="toggleContent()">About Type 2 Diabetes</h2>
+                <div id="type2-content" style="display: none;">
+                    <p>
+                        Type 2 diabetes is a chronic condition that affects the way
+                        the body processes blood sugar... y
+                    </p>
+                    <img
+                        src="resources/d-risk.png"
+                        alt="Chart of risk factors affecting diabetes"
+                    />
+                </div>
             </section>
+
+
 
             <section>
                 <div id="to-center">
-                <h2>
+                <h2 onclick="toggleTable()">
                     Weighted Prevalence of Diabetes and Prediabetes in 15
                     States/Union Territory of India - The ICMR INDIAB Study
                 </h2>
-                <table border="1" cellspacing="0" cellpadding="5">
+                <table border="1" cellspacing="0" cellpadding="5" id="diabetes-table" style="display: none;">
                     <thead>
                         <tr>
                             <th rowspan="2">States/UT</th>
@@ -258,80 +262,154 @@
                 </div>
             </section>
 
-            <section id="cinnamon-benefits">
-                <h2>Benefits of Cinnamon</h2>
-                <ul>
-                    <li>
-                        <strong>Improves Insulin Sensitivity:</strong> Enhances
-                        the body’s response to insulin.
-                    </li>
-                    <li>
-                        <strong>Antioxidant Properties:</strong> Rich in
-                        polyphenols that help fight oxidative stress.
-                    </li>
-                    <li>
-                        <strong>Anti-Inflammatory:</strong> Reduces
-                        inflammation, aiding in overall wellness.
-                    </li>
-                </ul>
+            <section id="mech-diabetes">
+                <h1>But what is diabetes? Types? Cause ?</h1>
+                <div>
+                    Diabetes is a dysfunction characterised by abnormal blood glucose level, basically your body; due to various reasons loses its ability to maintain its blood glucose levels.
+
+                    It is characterised by several symptoms including frequent thirst and frequent urination, reduced stamina in daily tasks, and loss of vision.
+
+                    There may be various reasons this dysfunction occurs, mostly attributed to genetics and lifestyle.
+                    There are two types of Diabetes, called simply, Type I and Type II.
+
+                    Focus of our study here is Type 2. All you need to know is that these sensors on your cells which take the command to take in glucose from the bloodstream get damaged (oversensitised). This is blamed mostly on older individuals, therefore being called the onset adulthood disease. Even so, it's becoming quite common in young people too nowadays.
+                </div>
+
+                <div>
+                    <details>
+                            <summary>Read More</summary>
+                            Diabetes is a metabolic dysfunction characterised by chronic hyperglycemia, resulting from either impaired insulin secretion, insulin action, or a combination of both. This dysfunction compromises the body's ability to regulate blood glucose levels, which can lead to systemic complications over time.
+
+                            The condition is primarily marked by symptoms such as polydipsia (excessive thirst), polyuria (frequent urination), fatigue, and in severe cases, vision impairment due to retinal damage. These symptoms arise because elevated glucose levels in the bloodstream cannot be effectively utilised by the body’s cells.
+
+                            Diabetes mellitus is generally classified into two major types:
+                            <ul>
+                            <li><strong>Type I Diabetes Mellitus (T1DM):</strong> An autoimmune disorder where the body’s immune system attacks insulin-producing beta cells in the pancreas. This type is more prevalent among younger individuals.</li>
+                            <li><strong>Type II Diabetes Mellitus (T2DM):</strong> The focus of this discussion, Type II Diabetes results from a progressive decline in insulin sensitivity at the cellular level, compounded by insufficient compensatory insulin secretion.</li>
+                            </ul>
+
+                            Type II Diabetes, often referred to as a lifestyle disease, is primarily associated with older age but has seen an alarming increase in younger populations due to sedentary lifestyles, poor dietary habits, and obesity. In this type, insulin receptor cells in tissues such as the liver, muscles, and adipose tissue become less responsive to insulin (a phenomenon termed insulin resistance). Consequently, glucose uptake is impaired, leading to its accumulation in the bloodstream.
+
+                            At the biochemical level, insulin resistance in Type II Diabetes is a result of multiple cellular and molecular mechanisms. Insulin receptors, which are located on the surface of various cells, typically mediate the uptake of glucose from the bloodstream. However, in the presence of insulin resistance, these receptors become less responsive to insulin signaling.
+
+                            Normally, insulin binds to its receptor, triggering a cascade of intracellular signaling events, most notably the activation of the insulin receptor substrate (IRS) proteins. These proteins activate downstream pathways such as the phosphoinositide 3-kinase (PI3K)/Akt pathway, which ultimately stimulates glucose transporter proteins (such as GLUT4) to translocate to the cell membrane and facilitate glucose uptake. However, in insulin resistance, this signaling cascade is impaired due to decreased receptor sensitivity or defects in the IRS proteins. This results in a diminished ability of muscle and adipose tissues to uptake glucose, while the liver continues to produce glucose via gluconeogenesis.
+
+                            Additionally, an increase in free fatty acids (FFAs) in the bloodstream, often seen in obesity, contributes to insulin resistance. FFAs activate protein kinase C (PKC), which interferes with insulin signaling, and also promote inflammation through the release of cytokines. Adipokines, such as tumor necrosis factor-alpha (TNF-α) and interleukin-6 (IL-6), secreted by adipose tissue, further exacerbate insulin resistance by impairing the insulin signaling pathway.
+
+                            Contributing factors to the onset of Type II Diabetes include:
+                            <ul>
+                            <li><strong>Genetic Predisposition:</strong> A family history of diabetes significantly increases risk due to the inheritance of genetic variants that affect insulin sensitivity and beta-cell function.</li>
+                            <li><strong>Lifestyle Factors:</strong> Poor nutrition, lack of physical activity, and chronic stress are notable contributors to the onset and progression of insulin resistance.</li>
+                            <li><strong>Obesity:</strong> Adipose tissue produces inflammatory markers that exacerbate insulin resistance. In particular, visceral fat, which accumulates around internal organs, is more strongly associated with insulin resistance and Type II Diabetes than subcutaneous fat.</li>
+                            </ul>
+
+                            Complications of poorly managed Type II Diabetes extend beyond hyperglycemia. Long-term effects include damage to the cardiovascular system, kidneys (nephropathy), nerves (neuropathy), and eyes (retinopathy). These complications are thought to result from both hyperglycemia-induced damage (such as advanced glycation end products, or AGEs) and the inflammatory state that accompanies insulin resistance.
+
+                            In the cardiovascular system, hyperglycemia accelerates the development of atherosclerosis by promoting the formation of AGEs, which damage the walls of blood vessels and increase the formation of plaques. In the kidneys, chronic high blood sugar leads to glomerular damage, resulting in diabetic nephropathy, which can eventually lead to kidney failure.
+
+                            Effective management hinges on early diagnosis, consistent monitoring of blood glucose levels, lifestyle modifications (including dietary changes and increased physical activity), and, in many cases, pharmacological intervention (such as metformin, which improves insulin sensitivity, and insulin therapy when necessary).
+
+                            In conclusion, understanding the pathophysiology of Type II Diabetes and its systemic impact underscores the importance of adopting preventative measures and ensuring comprehensive care for individuals diagnosed with this condition. The biochemical processes behind insulin resistance highlight the complex nature of the disease and the need for targeted therapeutic strategies.
+                        </details>
+                    </div>
             </section>
 
-            <section id="research">
-                <h2>Research on Cinnamon & Diabetes</h2>
-                <p>
-                    Studies have shown that cinnamon can lower blood sugar
-                    levels in some cases, though results vary...
-                </p>
-                <div id="research-summary">
-                    <p>
-                        <strong>Research Summary Placeholder:</strong>
-                        Placeholder text for summarizing recent studies on
-                        cinnamon’s effects on blood glucose levels.
-                    </p>
+            <section id="cinnamon-benefits">
+                <h2>Benefits of Cinnamon</h2>
+                <div>
+                    Cinnamon has been suggested to help manage Type II Diabetes. It contains compounds that may improve insulin sensitivity and lower blood sugar levels. Studies show that cinnamon might help reduce the body's resistance to insulin and lower fasting blood glucose levels, making it easier for people with Type II Diabetes to manage their condition. However, it’s important to use cinnamon as part of a balanced diet and lifestyle.
+                </div>
+
+                <div>
+                    <details>
+                        <summary>Read More</summary>
+                        <p><strong>Cinnamon</strong>, particularly <strong>Cinnamomum verum</strong> (Ceylon cinnamon), has been studied for its potential therapeutic effects on Type II Diabetes. The active compounds in cinnamon, such as cinnamaldehyde, cinnamic acid, and polyphenols, are thought to influence various metabolic pathways that can help regulate blood glucose levels. Specifically, cinnamon has been shown to exert anti-hyperglycemic effects through its impact on insulin sensitivity, glucose uptake, and inflammation.</p>
+
+                        <p><strong>Mechanisms of Action:</strong></p>
+                        <ul>
+                        <li><strong>Improvement of Insulin Sensitivity:</strong> Cinnamon contains bioactive compounds that enhance the action of insulin by stimulating insulin receptors or improving the efficiency of insulin signaling pathways. Cinnamaldehyde, a primary compound in cinnamon, has been shown to activate the insulin receptor substrate (IRS) proteins, particularly IRS-1 and IRS-2. These proteins are involved in mediating the insulin signal, which is critical for glucose uptake by the cells. This leads to increased translocation of glucose transporter proteins, such as GLUT4, to the cell membrane, facilitating enhanced glucose uptake by skeletal muscle and adipose tissue.</li>
+                        <li><strong>Inhibition of α-glucosidase Activity:</strong> Cinnamon also inhibits the activity of α-glucosidase, an enzyme located in the small intestine that is responsible for breaking down complex carbohydrates into simple sugars like glucose. By inhibiting α-glucosidase, cinnamon slows the digestion and absorption of carbohydrates, which helps mitigate postprandial (after-meal) blood glucose spikes. This action is particularly useful for managing blood glucose levels following carbohydrate-rich meals.</li>
+                        <li><strong>Antioxidant and Anti-inflammatory Effects:</strong> Chronic low-grade inflammation is a key feature of insulin resistance in Type II Diabetes. Cinnamon’s polyphenolic compounds, including proanthocyanidins and flavonoids, possess potent antioxidant properties that reduce oxidative stress by neutralizing free radicals. Additionally, cinnamon has been shown to lower the levels of pro-inflammatory cytokines such as tumor necrosis factor-alpha (TNF-α), interleukin-6 (IL-6), and C-reactive protein (CRP), which are involved in the inflammatory process that exacerbates insulin resistance. By modulating these inflammatory pathways, cinnamon may improve insulin sensitivity and reduce the systemic inflammation associated with Type II Diabetes.</li>
+                        <li><strong>Reduction in Hepatic Glucose Production:</strong> Cinnamon influences glucose metabolism in the liver, an organ that plays a significant role in blood glucose regulation. In individuals with Type II Diabetes, the liver can become resistant to insulin and overproduce glucose through gluconeogenesis. Cinnamon has been shown to inhibit key enzymes involved in gluconeogenesis, such as phosphoenolpyruvate carboxykinase (PEPCK) and glucose-6-phosphatase (G6Pase), helping to reduce hepatic glucose output. This contributes to more stable blood glucose levels throughout the day.</li>
+                        <li><strong>Modulation of Lipid Metabolism:</strong> Cinnamon may also impact lipid metabolism, which is often disturbed in individuals with Type II Diabetes. Studies have shown that cinnamon can reduce elevated levels of total cholesterol, low-density lipoprotein (LDL) cholesterol, and triglycerides. Additionally, cinnamon has been associated with an increase in high-density lipoprotein (HDL) cholesterol, which is considered beneficial for cardiovascular health. This effect on lipid profiles can be particularly important for people with Type II Diabetes, as they are at increased risk for cardiovascular diseases due to the combined effects of insulin resistance and dyslipidemia.</li>
+                        </ul>
+
+                        <p><strong>Clinical Studies:</strong></p>
+                        <ul>
+                        <li>Numerous clinical studies have examined the effect of cinnamon supplementation on blood glucose control in individuals with Type II Diabetes. A study published in the <strong>"Diabetes Care"</strong> journal found that cinnamon supplementation (1–6 grams per day) significantly lowered fasting blood glucose levels and improved insulin sensitivity in individuals with Type II Diabetes.</li>
+                        <li>Another randomized, double-blind trial showed that participants who consumed cinnamon extract for 12 weeks experienced significant reductions in HbA1c levels, a marker of long-term blood glucose control, as well as improved fasting glucose levels.</li>
+                        <li>Meta-analyses have also supported the beneficial effects of cinnamon on glycemic control, with several studies showing reductions in both fasting blood glucose and HbA1c levels in Type II Diabetic patients.</li>
+                        </ul>
+
+                        <p><strong>Types of Cinnamon:</strong></p>
+                        <ul>
+                        <li><strong>Ceylon Cinnamon (True Cinnamon):</strong> This variety is considered to be safer for regular consumption because it contains lower levels of coumarin, a compound that can cause liver toxicity in high doses. Ceylon cinnamon is the preferred choice for people with diabetes seeking the therapeutic effects of cinnamon. It is commonly available in powder form or as cinnamon sticks, and is often used in herbal supplements aimed at managing blood sugar levels.</li>
+                        <li><strong>Cassia Cinnamon:</strong> This type of cinnamon, which is more commonly available and less expensive, contains higher levels of coumarin. Cassia cinnamon should be consumed in moderation, especially by individuals with liver conditions, as excessive consumption of coumarin can lead to liver damage. It is important to note that Cassia cinnamon may be less effective than Ceylon cinnamon in improving blood glucose control, although it still has some beneficial effects.</li>
+                        </ul>
+
+                        <p><strong>Dosage and Safety:</strong></p>
+                        <ul>
+                        <li>The appropriate dosage of cinnamon for managing Type II Diabetes can vary depending on individual health conditions. Most studies have used doses ranging from 1 to 6 grams of cinnamon powder per day, often divided into two or three doses, or an equivalent amount in cinnamon extract.</li>
+                        <li>Cinnamon supplementation can be taken in several forms, including powdered cinnamon, cinnamon capsules, and cinnamon extracts. Some people prefer to use ground cinnamon in their daily diet, while others opt for concentrated extracts for greater potency.</li>
+                        <li>It is recommended to consult with a healthcare provider before starting regular cinnamon supplementation, especially for individuals with liver disease, those on anticoagulant medications (due to the blood-thinning properties of cinnamon), or individuals who are pregnant or breastfeeding.</li>
+                        </ul>
+
+                        <p><strong>Potential Side Effects:</strong></p>
+                        <ul>
+                        <li>Excessive consumption of Cassia cinnamon may lead to liver toxicity due to its high coumarin content, particularly when consumed in large amounts over extended periods. The threshold for safe coumarin intake is generally considered to be around 0.1 mg per kilogram of body weight per day. However, this is easily surpassed when using Cassia cinnamon in large doses.</li>
+                        <li>Cinnamon may also interact with certain medications, particularly those used for controlling blood sugar. In some cases, cinnamon supplementation may enhance the effects of these medications, leading to hypoglycemia (low blood sugar). Individuals on insulin or oral hypoglycemic agents should monitor their blood sugar levels closely when adding cinnamon to their regimen.</li>
+                        <li>Some people may experience mild gastrointestinal discomfort, such as bloating or gas, when consuming large amounts of cinnamon. These side effects are generally rare and usually occur with excessive intake.</li>
+                        </ul>
+
+                        <p><strong>Conclusion:</strong></p>
+                        <p>Cinnamon offers promising potential as a complementary approach in managing Type II Diabetes, thanks to its multifaceted mechanisms, including improving insulin sensitivity, reducing glucose absorption, and modulating lipid and inflammatory markers. While cinnamon supplementation should not replace traditional diabetes treatments, its incorporation into a well-balanced diet, alongside appropriate lifestyle changes, can contribute to better blood glucose control and overall metabolic health. However, caution should be exercised when using Cassia cinnamon regularly due to its coumarin content, and it is always advisable to consult a healthcare professional before initiating supplementation.</p>
+                    </details>
                 </div>
             </section>
 
-            <section>
-                <h2>Gallery</h2>
-                <img
-                    src="resources/image-removebg-preview (1).png"
-                    alt="A cool cinnamon image"
-                />
-                <p>A cool drawing of cinnamon</p>
-                <img
-                    src="resources/cinnamaldehyde.gif"
-                    alt="Spinning cinnamaldehyde molecule"
-                />
-                <p>The Miracle Molecule Cinnamaldehyde</p>
-                <img
-                    src="resources/Mechanisms-leading-to-insulin-resistance-in-diabetes-mellitus.png"
-                    alt="Mechanisms leading to insulin resistance in diabetes mellitus."
-                />
-                <p>
-                    Mechanisms leading to insulin resistance in diabetes
-                    mellitus.
-                </p>
-                <img
-                    src="resources/Pathophysiology-of-type-2-diabetes-mellitus.png"
-                    alt="Pathophysiology of type 2 diabetes mellitus."
-                />
-                <p>Pathophysiology of type 2 diabetes mellitus.</p>
-                <img
-                    src="resources/yo glut 4.gif"
-                    alt="animation of the insulin receptors functioning properly"
-                />
-                <p>
-                    Animation showing the functioning of inulin in healthy
-                    people, in case of diabetic type 2 patients , the lower part
-                    of the receptor protein doesn't function properly<br />
-                </p>
+            <section id="gallery">
+                <h2 onclick="toggleGalleryContent()">Gallery</h2>
+                <div id="gallery-content" style="display: none;">
+                    <img
+                        src="resources/image-removebg-preview (1).png"
+                        alt="A cool cinnamon image"
+                    />
+                    <p>A cool drawing of cinnamon</p>
+                    <img
+                        src="resources/cinnamaldehyde.gif"
+                        alt="Spinning cinnamaldehyde molecule"
+                    />
+                    <p>The Miracle Molecule Cinnamaldehyde</p>
+                    <img
+                        src="resources/Mechanisms-leading-to-insulin-resistance-in-diabetes-mellitus.png"
+                        alt="Mechanisms leading to insulin resistance in diabetes mellitus."
+                    />
+                    <p>
+                        Mechanisms leading to insulin resistance in diabetes
+                        mellitus.
+                    </p>
+                    <img
+                        src="resources/Pathophysiology-of-type-2-diabetes-mellitus.png"
+                        alt="Pathophysiology of type 2 diabetes mellitus."
+                    />
+                    <p>Pathophysiology of type 2 diabetes mellitus.</p>
+                    <img
+                        src="resources/yo glut 4.gif"
+                        alt="animation of the insulin receptors functioning properly"
+                    />
+                    <p>
+                        Animation showing the functioning of insulin in healthy
+                        people, in case of diabetic type 2 patients, the lower part
+                        of the receptor protein doesn't function properly
+                    </p>
 
-                <p>
-                    Bought to you by my diligent friend
-                    <a href="https://www.instagram.com/kriparth_patel/"
-                        >Kripath Patel</a
-                    >
-                </p>
+                    <p>
+                        Bought to you by my diligent friend
+                        <a href="https://www.instagram.com/kriparth_patel/"
+                            >Kripath Patel</a
+                        >
+                    </p>
+                </div>
             </section>
 
             <section id="video-tutorials">
@@ -370,6 +448,22 @@
                     </li>
                 </ul>
             </section>
+
+            <section id="research">
+                <h2>Research on Cinnamon & Diabetes</h2>
+                <p>
+                    Studies have shown that cinnamon can lower blood sugar
+                    levels in some cases, though results vary...
+                </p>
+                <div id="research-summary">
+                    <p>
+                        <strong>Research Summary Placeholder:</strong>
+                        Placeholder text for summarizing recent studies on
+                        cinnamon’s effects on blood glucose levels.
+                    </p>
+                </div>
+            </section>
+
         </main>
 
         <!-- Footer -->
